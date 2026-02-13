@@ -1,5 +1,5 @@
 # sueños
-El objetivo actual del proyecto es crear un modelo que en base a señales edf aprenda a predecir si el paciente esta teniendo un sueño agradable o desagradable.
+El objetivo actual del proyecto es crear un modelo que en base a señales edf realice una prediccion binaria sobre si el paciente esta teniendo un sueño agradable o desagradable.
 Como esto es un poco abstracto en caso de no obtener resultados me centraria en otro objetivo distinto un poco mas simple, entrenar un modelo para distinguir entre sueño vs no sueño en base al edf.
 
 # Estado del arte 
@@ -44,3 +44,37 @@ En el caso de que la prediccion de emociones sea demasiado complicada me centrar
 https://www.nature.com/articles/s41467-025-61945-1
 El artículo presenta la base de datos DREAM, un proyecto que unifica y estandariza varios estudios de aprendizaje maquina sobre el sueño, de forma que facilita el acceso a estos dependiendo de las necesidades del proyecto. En la carpeta Metadata hay csvs con informacion sobre los distintos datasets, y los registros de cada uno. 
 
+
+
+
+
+
+#Ratings.csv
+
+El archivo Ratings.csv contiene las evaluaciones emocionales asociadas a cada despertar del dataset. Cada fila corresponde a un archivo EEG (casexx_syy.edf).
+
+Incluye:
+
+Filename: Identificador del registro (Case ID y Subject ID).
+
+DreamReport_Wordcount: Número de palabras del reporte del sueño.
+
+SR_PA1–SR_PA10: Autoevaluación (0–4) de emociones positivas.
+
+SR_NA1–SR_NA10: Autoevaluación (0–4) de emociones negativas.
+
+ER_*: Evaluaciones externas basadas en frecuencia de aparición en el relato.
+
+En este proyecto se utiliza principalmente la suma de emociones positivas y negativas (self-rating) para construir un índice de valencia emocional del sueño.
+
+
+
+
+
+#Métricas de evaluación
+  
+Accuracy
+
+F1-score
+
+ROC-AUC 
