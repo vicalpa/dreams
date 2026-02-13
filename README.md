@@ -49,7 +49,7 @@ El artículo presenta la base de datos DREAM, un proyecto que unifica y estandar
 
 
 
-#Ratings.csv
+# Ratings.csv
 
 El archivo Ratings.csv contiene las evaluaciones emocionales asociadas a cada despertar del dataset. Cada fila corresponde a un archivo EEG (casexx_syy.edf).
 
@@ -71,7 +71,7 @@ En este proyecto se utiliza principalmente la suma de emociones positivas y nega
 
 
 
-#Métricas de evaluación
+# Métricas de evaluación
   
 Accuracy
 
